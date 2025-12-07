@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="M4Human">
+  <meta name="keywords" content="Human Mesh Reconstruction, mmwave Radar Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M4Human Dataset</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/NTU-AIoT-Lab">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/xyanchen/WiFi-CSI-Sensing-Benchmark">
+            SenseFi
+          </a>
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/NTU-AIoT-Lab/EfficientFi">
+            EfficientFi
+          </a>
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="">
+            MetaFi
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">M4Human: A Large-Scale Multimodal mmWave Radar Benchmark for Human Mesh Reconstruction</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Junqiao Fan</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Yizhuo Yang</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Yunjiao Zhou</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Jiarui Zhang</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Xinyuan Cui</a>,</span>
+            </span>
+            <span class="author-block">
+              <a href="https://toytiny.github.io/">Fangqiang Ding</a>,</span>
+            <span class="author-block">
+              <a href="https://personal.ntu.edu.sg/elhxie/">Lihua Xie</a>,</span>
+            <span class="author-block">
+              <a href="https://marsyang.site/">Jianfei Yang</a>,</span>
+            <span class="author-block">
+              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a></span>
+            
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Nanyang Technological University,</span>
+            <span class="author-block">NVIDIA,</span>
+            <span class="author-block">MIT,</span>
+            <span class="author-block">University College London</span>
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2403.16198"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.16198"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=T6TnKgGARgc"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/FanJunqiao/mmDiff"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+            
+          <!-- <br />
+          <br />
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>Under Review</b></span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo video link-->
+ <section class="hero teaser1">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+          <img src="./static/images/teaser.jpg"
+                  class="interpolation-image"
+                  alt="Interpolate start reference image."/>
+        <br/>
+
+      
+      <h2 class="subtitle has-text-centered">
+        M4Human is the largest multimodal dataset for high-fidelity RF-based mmWave radar human sensing (e.g., HMR).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human mesh reconstruction (HMR) provides direct insights into body-environment interaction, 
+            which enables various immersive applications. While existing large-scale HMR datasets rely 
+            heavily on line-of-sight RGB input, vision-based sensing is limited by occlusion, lighting 
+            variation, and privacy concerns. To overcome these limitations, recent efforts have explored 
+            radio-frequency (RF) mmWave radar for privacy-preserving indoor human sensing. However, current 
+            radar datasets are constrained by sparse skeleton labels, limited scale, and simple in-place actions. 
+            
+          </p>
+          <p>
+            To advance the HMR research community, we introduce M4Human, the current largest-scale (661K-frame) 
+            ($9\times$ prior largest) multimodal benchmark, 
+            featuring high-resolution mmWave radar, RGB, and depth data. 
+            M4Human provides both raw radar tensors (RT) and processed radar point clouds (RPC) 
+            to enable research across different levels of RF signal granularity. M4Human includes
+             high-quality motion capture (MoCap) annotations with 3D meshes and global trajectories, 
+             and spans 20 subjects and 50 diverse actions, including in-place, sit-in-place, and free-space 
+             sports or rehabilitation movements. We establish benchmarks on both RT and RPC modalities, as well as 
+             multimodal fusion with RGB-D modalities. Extensive results highlight the significance of 
+             M4Human for radar-based human modeling while revealing persistent challenges under fast, 
+             unconstrained motion. The dataset and code will be released after the paper publication.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">Sensor Setup</h2>
+          <img src="./static/images/system_setup.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+          <div class="content has-text-justified">
+            <p>
+              Overview of the system setup. M4Human designs a multimodal sensing platform with high-precision 
+              marker-based MoCap system. Appropriate calibration and synchronization workflow are designed for 
+              accurate alignment between modalities and annotations.
+            </p>
+          </div>
+      </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">Dataset Scale</h2>
+          <img src="./static/images/scale.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+
+          <div class="content has-text-justified">
+            <p>
+              Comparison of M4Human with prior datasets ($\dag$ denotes non-public data). 
+              Overall, M4Human is the largest RF-based dataset with multi-granularity motion 
+              annotations across diverse sensing tasks. It provides both raw radar tensors 
+              (RT) and filtered radar point clouds (RPC) for high-fidelity HMR, and extends
+               beyond simple in-place activities to complex, non-in-place rehabilitation and 
+               sports. Human body annotations are obtained with a high-precision marker-based 
+               MoCap system rather than RGB(D) images (entries marked with *) 
+              </p>
+          </div>
+      </div>
+      </div>
+  </div>
+</section>
+
+  
+  
+<section class="hero video">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">HMR Visualization</h2>
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/demo_small.mp4"
+                    type="video/mp4">
+          </video>
+
+          <h2 class="subtitle has-text-centered">
+            We provide visualization of frame-level Human Mesh Reconstruction (HMR) Results.
+          </h2>
+      </div>
+      </div>
+  </div>
+</section>
+
+<!-- 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" muted playsinline preload="metadata" height="100%" data-fps="30">
+        <source src="./static/videos/demo_small.mp4" type="video/mp4">
+      </video>
+
+      <div class="field" style="margin-top: 1rem;">
+        <input id="teaser-slider" class="slider is-fullwidth is-large" type="range" min="0" max="1" step="1" value="0">
+        <p class="has-text-centered">Frame <span id="teaser-frame">0</span>/<span id="teaser-frame-total">0</span></p>
+      </div>
+
+      <h2 class="subtitle has-text-centered">
+        We provide visualization of frame-level Human Mesh Reconstruction Results.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+  
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/T6TnKgGARgc?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+  </div>
+</section>
+-->
+<!--要改watch?v= 成 embed/；原链接里&后的部分删掉变成?rel=0&amp;showinfo=0-->
+
+      
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">License</h2>
+          <div class="content has-text-justified">
+            <p>
+              M4Human is released under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+            </p>
+      </div>
+      </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@inproceedings{
+      yang2023mm,
+      title={MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset for Versatile Wireless Sensing},
+      author={Yang, Jianfei and Huang, He and Zhou, Yunjiao and Chen, Xinyan and Xu, Yuecong 
+              and Yuan, Shenghai and Zou, Han and Lu, Chris Xiaoxuan and Xie, Lihua},
+      booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+      year={2023},
+      url={https://openreview.net/forum?id=1uAsASS1th}
+  <!-- }</code></pre>
+    <pre><code>enter bitex here@article{fan2024diffusion,
+      title={Diffusion Model is a Good Pose Estimator from 3D RF-Vision},
+      author={Fan, Junqiao and Yang, Jianfei and Xu, Yuecong and Xie, Lihua},
+      journal={arXiv preprint arXiv:2403.16198},
+      year={2024}
+}</code></pre> -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/NTU-AIoT-Lab" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. And it is borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
