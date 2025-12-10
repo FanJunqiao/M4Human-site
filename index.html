@@ -74,7 +74,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span style="color: #4E96D9;">M4Human</span>: A Large-Scale Multimodal mmWave Radar Benchmark for Human Mesh Reconstruction</h1>
+          <h1 class="title is-1 publication-title"><span style="color: #3e95cb;">M4Human</span></h1>
+          <h1 class="title is-1 publication-title"><span style="color: #424242; font-size: 0.8em;">A Large-Scale Multimodal mmWave Radar Benchmark for Human Mesh Reconstruction</span></h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <sup style="font-size: 0.6em;">1</sup><a href="https://scholar.google.com.hk/citations?hl=en&user=5cEG4tIAAAAJ">Junqiao Fan</a>,</span>
@@ -100,8 +101,8 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup style="font-size: 0.7em;">1</sup>Nanyang Technological University,</span>
-            <span class="author-block"><sup style="font-size: 0.7em;">2</sup>NVIDIA,</span>
-            <span class="author-block"><sup style="font-size: 0.7em;">3</sup>MIT,</span>
+            <span class="author-block"><sup style="font-size: 0.7em;">2</sup>University of Pennsylvania,</span>
+            <span class="author-block"><sup style="font-size: 0.7em;">3</sup>Massachusetts Institute of Technology,</span>
             <span class="author-block"><sup style="font-size: 0.7em;">4</sup>University College London</span>
             
           </div>
@@ -159,8 +160,10 @@
   </div>
 </section>
 
+
+
 <!-- Demo video link-->
- <section class="hero teaser1">
+ <section class="hero teaser png">
   <div class="container is-max-desktop">
     <div class="hero-body">
           <img src="./static/images/teaser.jpg"
@@ -175,7 +178,6 @@
     </div>
   </div>
 </section>
-
 
 
 
@@ -280,7 +282,9 @@
   
       <div class="columns is-centered">
       <div class="column is-full-width">
-          <h2 class="title is-3">Sensor Setup</h2>
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Sensor System Setup</h2>
+        </div>
           <img src="./static/images/system_setup.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
@@ -296,12 +300,38 @@
   </div>
 </section>
 
+
+<!-- Demo card link-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">Dataset Videos</h2>
+        </div>
+    <h2 class="title is-4">In-Place Daily Actions</h2>
+    <div class="scroll-row" id="dataset-gallery" data-act-ids="1,2,3,5,8,9,10,12,14,31" data-fps="10" data-frames="30"></div>
+    <h2 class="title is-4">In-Place Rehabilitation Actions</h2>
+    <div class="scroll-row" id="dataset-gallery1" data-act-ids="19,21,22,24,28,29,30,33,35" data-fps="10" data-frames="30"></div>
+    <h2 class="title is-4">Non-In-Place Daily Actions</h2>
+    <div class="scroll-row" id="dataset-gallery2" data-act-ids="36,37,38,39,48,49" data-fps="10" data-frames="100"></div>
+    <h2 class="title is-4">Non-In-Place Sports Actions</h2>
+    <div class="scroll-row" id="dataset-gallery3" data-act-ids="40,41,43,44,45,46,47,50" data-fps="10" data-frames="100"></div>
+  </div>
+</section>
+
+
+
+  
+
+
 <section class="section">
   <div class="container is-max-desktop">
   
       <div class="columns is-centered">
       <div class="column is-full-width">
+        <div class="columns is-centered has-text-centered">
           <h2 class="title is-3">Dataset Scale</h2>
+        </div>
+          
           <img src="./static/images/scale.jpg"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
@@ -311,9 +341,7 @@
               <b>Comparison of M4Human with prior datasets</b> († denotes non-public data): 
               Overall, M4Human is the largest RF-based dataset with multi-granularity motion 
               annotations across diverse sensing tasks. It provides both raw radar tensors 
-              (RT) and filtered radar point clouds (RPC) for high-fidelity HMR, and extends
-               beyond simple in-place activities to complex, non-in-place rehabilitation and 
-               sports. Human body annotations are obtained with a high-precision marker-based 
+              (RT) and filtered radar point clouds (RPC) for high-fidelity HMR. Human body annotations are obtained with a high-precision marker-based 
                MoCap system rather than RGB(D) images (entries marked with *) 
               </p>
           </div>
@@ -322,14 +350,39 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
   
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <!-- <h2 class="title is-3">Action Set</h2> -->
+          <img src="./static/images/actions.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+
+          <div class="columns is-centered has-text-centered">
+            <p>
+              <b>Action set in M4Human.</b> M4Human extends
+               beyond simple in-place activities to complex, non-in-place rehabilitation and 
+               sports. 
+              </p>
+          </div>
+
+      </div>
+      </div>
+  </div>
+</section>
+
   
 <section class="hero video">
   <div class="container is-max-desktop">
   
       <div class="columns is-centered">
       <div class="column is-full-width">
-          <h2 class="title is-3">HMR Visualization</h2>
+        <div class="columns is-centered has-text-centered">
+          <h2 class="title is-3">mmWave HMR Benchmark (Main)</h2>
+        </div>
           <video id="teaser" autoplay muted loop playsinline height="100%">
             <source src="./static/videos/demo_small.mp4"
                     type="video/mp4">
@@ -396,7 +449,7 @@
   </div>
 </section>
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">Citation</h2>
     <pre><code>@inproceedings{
@@ -407,15 +460,15 @@
       booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
       year={2023},
       url={https://openreview.net/forum?id=1uAsASS1th}
-  <!-- }</code></pre>
+  }</code></pre>
     <pre><code>enter bitex here@article{fan2024diffusion,
       title={Diffusion Model is a Good Pose Estimator from 3D RF-Vision},
       author={Fan, Junqiao and Yang, Jianfei and Xu, Yuecong and Xie, Lihua},
       journal={arXiv preprint arXiv:2403.16198},
       year={2024}
-}</code></pre> -->
+}</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">

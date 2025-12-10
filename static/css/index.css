@@ -155,3 +155,54 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+.scroll-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.video-card {
+  min-width: 30vw;
+  max-width: 30vw;
+  flex: 0 0 auto;
+  border: 2px solid #c49a6c; /* warm wood tone */
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #f9edd7 0%, #f2e3cf 50%, #f9edd7 100%);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.video-card .has-text-weight-semibold {
+  text-align: center;
+  font-weight: 700;
+  color: #5b3a1a;
+  margin-bottom: 0.5rem;
+}
+
+.video-card video,
+.video-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;   /* force 16:9 instead of 3:4 */
+  object-fit: cover;
+  border-radius: 6px;
+  background: #000;
+}
+
+.video-card .slider {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+
+.video-card .frame-label {
+  text-align: center;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+
