@@ -515,3 +515,64 @@ const createCard = (id) => {
   });
 });
 // ...existing code...
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.getElementById('pred-gallery');
+  if (!gallery) return;
+
+  const VIDEO_IDS = Array.from({length: 14}, (_, i) => i + 1);
+  const DEFAULT_FPS = 10;
+  const MAX_FRAMES = 30;
+
+  const createCard = (id) => {
+    const card = document.createElement('div');
+    card.className = 'video-card1';
+    card.innerHTML = `
+      <video preload="metadata" muted playsinline>
+        <source src="./static/pred/${id}.mp4" type="video/mp4">
+      </video>
+      <input class="slider" type="range" min="0" max="1" step="1" value="0">
+      <div class="frame-label">Frame <span class="frame-now">0</span>/<span class="frame-total">0</span></div>
+    `;
+    return card;
+  };
+
+  const initCard = (card) => {
+    const video = card.querySelector('video');
+    const slider = card.querySelector('input[type="range"]');
+    const frameNow = card.querySelector('.frame-now');
+    const frameTotal = card.querySelector('.frame-total');
+    const fps = DEFAULT_FPS;
+
+    video.addEventListener('loadedmetadata', () => {
+      const framesByDuration = Math.max(1, Math.round(video.duration * fps));
+      const totalFrames = Math.min(MAX_FRAMES, framesByDuration);
+      slider.max = totalFrames - 1;
+      frameTotal.textContent = totalFrames;
+
+      video.currentTime = 0.001;
+      video.pause();
+
+      slider.addEventListener('input', () => {
+        const frameIdx = Number(slider.value);
+        video.currentTime = frameIdx / fps;
+        frameNow.textContent = frameIdx;
+      });
+    });
+
+    video.addEventListener('timeupdate', () => {
+      if (!isFinite(video.duration) || video.duration === 0) return;
+      const currentFrame = Math.round(video.currentTime * fps);
+      slider.value = currentFrame;
+      frameNow.textContent = currentFrame;
+    });
+  };
+
+  VIDEO_IDS.forEach((id) => {
+    const card = createCard(id);
+    gallery.appendChild(card);
+    initCard(card);
+  });
+});
