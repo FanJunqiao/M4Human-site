@@ -74,7 +74,40 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span style="color: #3e95cb;">M4Human</span></h1>
+          <h1 class="title is-1 publication-title">
+            <span style="color: #3ecba5; font-family: 'Castoro', serif; font-weight: 700; letter-spacing: 0.04em;">
+              M4Human
+            </span>
+          </h1>
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const title = document.querySelector('.publication-title');
+              if (!title) return;
+
+              const icon = document.createElement('img');
+              const fontLink = document.createElement('link');
+              fontLink.rel = 'stylesheet';
+              fontLink.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Playfair+Display:wght@700&family=Montserrat:wght@700&family=Cormorant+Garamond:wght@700&family=Merriweather:wght@700&display=swap';
+              document.head.appendChild(fontLink);
+
+              const titleText = title.querySelector('span');
+              if (titleText) {
+                titleText.style.fontFamily = "'Poppins', sans-serif"; // clean modern
+                // titleText.style.fontFamily = "'Playfair Display', serif"; // elegant
+                // titleText.style.fontFamily = "'Montserrat', sans-serif"; // bold tech
+                // titleText.style.fontFamily = "'Cormorant Garamond', serif"; // classic
+                // titleText.style.fontFamily = "'Merriweather', serif"; // academic
+              }
+              icon.src = './static/images/icon1.png';
+              icon.alt = 'M4Human icon';
+              icon.style.width = '3em';
+              icon.style.height = '3em';
+              icon.style.marginRight = '0.1em';
+              icon.style.verticalAlign = 'middle';
+
+              title.insertBefore(icon, title.firstChild);
+            });
+            </script>
           <h1 class="title is-1 publication-title"><span style="color: #424242; font-size: 0.8em;">A Large-Scale Multimodal mmWave Radar Benchmark for Human Mesh Reconstruction</span></h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -111,9 +144,7 @@
             
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><b>CVPR 2026</b></span>
-          </div>
+        
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -163,6 +194,11 @@
             <span class="author-block"><b>Under Review</b></span>
           </div> -->
         </div>
+        <br />
+          <div style="font-size: 2em;">
+            <span style="color: #cb933e;"><b>Accepted by CVPR 2026</b></span>
+          </div>
+          <br />
       </div>
     </div>
   </div>
